@@ -1,4 +1,4 @@
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -6,10 +6,10 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-const countLetters = function (sentence) {
+const countLetters = function(sentence) {
   let result = {};
   const sentenceArray = sentence.split(" ").join("").split("");
-  for (item of sentenceArray) {
+  for (let item of sentenceArray) {
     if (result[item]) {
       result[item] += 1;
     } else {

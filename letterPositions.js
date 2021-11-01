@@ -20,10 +20,10 @@ const assertArrayEqual = (array1, array2, expected) => {
   }
 };
 
-const letterPositions = function (sentence) {
+const letterPositions = function(sentence) {
   const results = {};
-  sentenceArray = sentence.split(" ").join("").split("");
-  for (index in sentenceArray) {
+  const sentenceArray = sentence.split(" ").join("").split("");
+  for (let index in sentenceArray) {
     if (!results[sentenceArray[index]]) {
       results[sentenceArray[index]] = [];
     }

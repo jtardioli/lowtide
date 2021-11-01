@@ -1,25 +1,3 @@
-const eqArrays = (array1, array2) => {
-  if (array1.length === array2.length) {
-    for (let i = 0; i <= array1.length; i++) {
-      if (!(array1[i] === array2[i])) {
-        return false;
-      }
-    }
-  } else {
-    return false;
-  }
-  return true;
-};
-
-const assertArrayEqual = (array1, array2, expected) => {
-  const actual = eqArrays(array1, array2);
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const flatten = (array) => {
   let flattenedArray = [];
   const flattenInner = (array) => {
@@ -45,10 +23,5 @@ const flatten = (array) => {
   return flattenedArray;
 };
 
-// return within for each
-// proper way to escape a function
-// pure functions
-// closures
+module.exports = flatten;
 
-//console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
-console.log(flatten([1, 2, [3, 4], 5, [6]]));

@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@jtardioli/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArrayEqual.js",
+  "description": "Usefull library with functions to solve basic problems in javascript",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/jtardioli/lowtide.git"
   },
-  "author": "Joshua Tardioli",
+  "author": "jtardioli",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jtardioli/lowtide/issues"

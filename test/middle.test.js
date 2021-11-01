@@ -1,10 +1,25 @@
-const assertArrayEqual = require('../assertArrayEqual');
+const assert = require('chai').assert;
 const middle = require('../middle');
 
-assertArrayEqual(middle([]), [], true);
-assertArrayEqual(middle([1]), [], true);
-assertArrayEqual(middle([1, 2]), [], true);
-assertArrayEqual(middle([1, 2]), ["asdf"], false);
-assertArrayEqual(middle([1, 2, 3]), [2], true);
-assertArrayEqual(middle([1, 2, 3, 5]), [2, 3], true);
-assertArrayEqual(middle([1, 2, 3, 5, 6, 7, 8, 9, 6, 5, 4, 3, 2]), [8], true);
+describe('#middle', () => {
+  it('Empty array should return an empty array', () => {
+    assert.deepEqual(middle([]), []);
+  });
+  it('1 item array should return empty array', () => {
+    assert.deepEqual(middle([1]), []);
+  });
+  it('2 item array should return empty array', () => {
+    assert.deepEqual(middle([1, 2]), []);
+  });
+  it('2 item array should return empty array', () => {
+    assert.deepEqual(middle([1, 2]), []);
+  });
+  it('return middle with array of odd length', () => {
+    assert.deepEqual(middle([1, 2, 3]), [2]);
+  });
+  it('return middle with array of even length', () => {
+    assert.deepEqual(middle([1, 2, 3, 5]), [2, 3]);
+  });
+});
+
+
